@@ -43,6 +43,19 @@ py parse_to_csv.py   # data/applications.txt -> data/applications.csv
 py analyze.py
 ```
 
+## LLM summary (optional)
+
+`llm_readout.py` sends only the aggregated stats (counts per outcome, per month,
+and repeat companies) to a local [Ollama](https://ollama.com) model and prints a
+2-3 sentence summary:
+
+```
+ollama run llama3.2
+py llm_readout.py data/applications.sample.csv
+```
+
+Set `OLLAMA_MODEL` to use another model (e.g. `llama3`).
+
 Run the tests with:
 
 ```
